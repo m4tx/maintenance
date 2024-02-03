@@ -1,0 +1,8 @@
+branch: boiler-update
+concurrent: 8
+fetch-depth: 0
+git-type: cmd
+
+repo:
+  - m4tx/boiler
+  - m4tx/riichi-hand-rs

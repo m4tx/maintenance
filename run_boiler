@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -e
+
+function check_prog {
+	if ! hash "$1" >/dev/null 2>&1; then
+		echo "Command not found: $1.$2 Aborting..."
+		exit 1
+	fi
+}
+
+check_prog multi-gitter " Please get it from https://github.com/lindell/multi-gitter and put it in your \$PATH."
+check_prog boiler " Please get it from https://github.com/m4tx/boiler and put it in your \$PATH."
+
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+
+multi-gitter run \
+	"${SCRIPT_DIR}/update_repo" \
+	--config "${SCRIPT_DIR}/multi-gitter.yml" \
+	-m "chore: rerun boiler (version $(boiler --version))"
