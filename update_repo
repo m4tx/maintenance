@@ -1,4 +1,0 @@
-#!/bin/bash
-
-boiler update
-pre-commit run -a || pre-commit run -a

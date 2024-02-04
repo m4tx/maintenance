@@ -5,4 +5,9 @@ git-type: cmd
 
 repo:
   - m4tx/boiler
+  - m4tx/chombo-gen
+  - m4tx/maintenance
+  - m4tx/rans-rs
   - m4tx/riichi-hand-rs
+  - m4tx/tundra
+  - riichi/chombot

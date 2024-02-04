@@ -15,6 +15,6 @@ check_prog boiler " Please get it from https://github.com/m4tx/boiler and put it
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 multi-gitter run \
-	"${SCRIPT_DIR}/update_repo" \
+	"${SCRIPT_DIR}/_update_repo" \
 	--config "${SCRIPT_DIR}/multi-gitter.yml" \
 	-m "chore: rerun boiler (version $(boiler --version))"

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Updates a single repository; normally should only be used by `run_boiler`
+
+boiler update
+pre-commit run -a || pre-commit run -a
